@@ -36,12 +36,6 @@
             background-color: #111111;
             color: #EAEAEA;
         }
-        .hero-section {
-            /* IMAGEM DA HERO ATUALIZADA PARA HTTPS */
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,1)), url('https://curso.felipperibeiromega.com.br/imagem/cp.webp');
-            background-size: cover;
-            background-position: center;
-        }
         .highlight-gold {
             color: #D4AF37;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
@@ -67,81 +61,12 @@
             font-weight: 800;
             line-height: 1.2;
         }
-        .module-card, .faq-item, .bonus-card, .comparison-card {
+        .faq-item {
             background: #1C1C1C;
             border: 1px solid #333333;
             border-radius: 16px;
         }
-
-        /* Estilos do Modal (Mantidos para reutilização) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .modal.open {
-            display: flex;
-            opacity: 1;
-        }
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-            transform: scale(0.8);
-            transition: transform 0.3s ease-in-out;
-        }
-        .modal.open .modal-content {
-            transform: scale(1);
-        }
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1ff;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .modal-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 3rem;
-            color: #f1f1ff;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            user-select: none;
-            padding: 1rem;
-            z-index: 101;
-        }
-        .modal-nav.prev {
-            left: 20px;
-        }
-        .modal-nav.next {
-            right: 20px;
-        }
-        .modal-nav:hover {
-            color: #d4af37;
-        }
     </style>
-
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WDXZ48CP');</script>
 
     <script type="application/ld+json">
     {
@@ -183,35 +108,11 @@
       ]
     }
     </script>
-
 </head>
 <body class="antialiased">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDXZ48CP"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-yellow-500/5">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold highlight-gold">Felippe Ribeiro</a>
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="tecnica.html" class="text-gray-300 hover:highlight-gold transition-colors">A Técnica</a>
-                <a href="comparativo.html" class="text-gray-300 hover:highlight-gold transition-colors">Comparativo</a>
-                <a href="depoimentos.html" class="text-gray-300 hover:highlight-gold transition-colors">Depoimentos</a>
-                <a href="sobre.html" class="text-gray-300 hover:highlight-gold transition-colors">Sobre</a>
-                <a href="faq.html" class="text-gray-300 hover:highlight-gold transition-colors">FAQ</a>
-            </nav>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
-            <a href="tecnica.html" class="block text-gray-300 hover:highlight-gold transition-colors">A Técnica</a>
-            <a href="comparativo.html" class="block text-gray-300 hover:highlight-gold transition-colors">Comparativo</a>
-            <a href="depoimentos.html" class="block text-gray-300 hover:highlight-gold transition-colors">Depoimentos</a>
-            <a href="sobre.html" class="block text-gray-300 hover:highlight-gold transition-colors">Sobre</a>
-            <a href="faq.html" class="block text-gray-300 hover:highlight-gold transition-colors">FAQ</a>
+    <header class="bg-black py-4">
+        <div class="container mx-auto px-6 text-center">
+            <a href="index.html" class="text-3xl font-bold highlight-gold">Felippe Ribeiro</a>
         </div>
     </header>
 
@@ -237,6 +138,9 @@
                         <p class="text-gray-400 mt-2">Sim! Se você já tem o cabelo (de outra técnica, por exemplo), nós podemos avaliá-lo, preparar (tecer) ele para o Ponto Americano e fazer a aplicação. A oferta de troca de técnica da Black Friday é perfeita para você.</p>
                     </div>
                 </div>
+                <div class="text-center mt-16">
+                    <a href="https://wa.me/5542999066879?text=Oi%2C%20vi%20a%20página%20de%20Perguntas%20Frequentes%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o!" class="cta-button" target="_blank">Agendar Avaliação</a>
+                </div>
             </div>
         </section>
     </main>
@@ -244,74 +148,5 @@
     <footer class="text-center py-10 bg-black">
         <p class="text-gray-500">&copy; 2025 Felippe Ribeiro Mega Hair. Todos os direitos reservados.</p>
     </footer>
-
-    <div id="imageModal" class="modal">
-        <span id="prevModal" class="modal-nav prev">&lt;</span>
-        <span id="nextModal" class="modal-nav next">&gt;</span>
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      if(mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
-      }
-
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImage');
-      const closeBtn = document.querySelector('.modal-close');
-
-      // Lista de imagens que abrem o modal
-      const clickableImages = ['imgResultado', 'imgDepoimento'];
-
-      clickableImages.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) {
-          img.onclick = function() {
-            modal.style.display = "flex";
-            modal.classList.add('open');
-            modalImg.src = this.src;
-          }
-        }
-      });
-
-      // Fechar o modal
-      const closeModal = function() {
-        modal.classList.remove('open');
-        setTimeout(() => {
-          modal.style.display = "none";
-        }, 300); // Espera a transição do CSS
-      }
-
-      if(closeBtn) {
-        closeBtn.onclick = closeModal;
-      }
-      if(modal) {
-        modal.onclick = function(event) {
-            // Fecha se clicar fora da imagem
-            if (event.target === modal) {
-            closeModal();
-            }
-        }
-      }
-
-      const prevModal = document.getElementById('prevModal');
-      if (prevModal) {
-        // Remove a navegação prev/next, pois não é um carrossel
-        prevModal.style.display = 'none';
-      }
-      const nextModal = document.getElementById('nextModal');
-      if(nextModal) {
-        nextModal.style.display = 'none';
-      }
-    });
-    </script>
-
 </body>
 </html>
